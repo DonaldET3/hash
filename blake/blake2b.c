@@ -1,5 +1,6 @@
 /* Opal BLAKE2b
  * for Unix
+ * version 1.1
  */
 
 
@@ -116,12 +117,14 @@ void failed(char *message)
 /* help message */
 void help()
 {
- char message[] = "Opal BLAKE2b\n\n"
+ char message[] = "Opal BLAKE2b\n"
+ "version 1.1\n\n"
  "options\n"
  "h: print help and exit\n"
  "l: list mode; read filenames from standard input and output hashes\n"
  "c: check mode; read hashes and filenames from standard input and check them\n"
- "s: hash length in bytes (default: 64)\n\n"
+ "s: hash length in bytes (default: 64)\n"
+ "q: quiet mode\n\n"
  "By default, the program simply hashes standard input.\n";
  fputs(message, stderr);
 }
@@ -343,7 +346,7 @@ void hash_files(int len)
  return;
 }
 
-void check_files(int len)
+void check_files(int len, bool verbose)
 {
  uintmax_t fails = 0;
  char *line = NULL, *old_hash, *fn;
@@ -358,11 +361,14 @@ void check_files(int len)
   if((fp = fopen(fn = strtok(NULL, "\n"), "rb")) == NULL)
   {
    fails++;
-   perror(fn);
+   printf("%s: %s\n", fn, strerror_l(errno, uselocale(0)));
    continue;
   }
   hash_stream(fp, len);
-  if(cmp_hash(old_hash, len)) printf("%s: OK\n", fn);
+  if(cmp_hash(old_hash, len))
+  {
+   if(verbose) printf("%s: OK\n", fn);
+  }
   else
   {
    printf("%s: FAILED\n", fn);
@@ -383,6 +389,7 @@ int main(int argc, char **argv)
  int c, mode = 0, len;
  extern char *optarg;
  extern int opterr, optind, optopt;
+ bool verbose = true;
 
  /* the errno symbol is defined in errno.h */
  errno = 0;
@@ -391,13 +398,14 @@ int main(int argc, char **argv)
  len = 64;
 
  /* parse the command line */
- while((c = getopt(argc, argv, "hlcs:")) != -1)
+ while((c = getopt(argc, argv, "hlcs:q")) != -1)
   switch(c)
   {
    case 'h': help(); exit(EXIT_SUCCESS);
    case 'l': mode = 1; break;
    case 'c': mode = 2; break;
    case 's': if(sscanf(optarg, "%d", &len) != 1) invalid(c); break;
+   case 'q': verbose = false; break;
    case '?': exit(EXIT_FAILURE);
   }
 
@@ -406,7 +414,7 @@ int main(int argc, char **argv)
 
  if(mode == 0) hash_input(len);
  else if(mode == 1) hash_files(len);
- else if(mode == 2) check_files(len);
+ else if(mode == 2) check_files(len, verbose);
  else return EXIT_FAILURE;
 
  return EXIT_SUCCESS;
