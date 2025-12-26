@@ -1,0 +1,6 @@
+Opal hash file format pattern
+
+magic string, version number
+hash parameters
+filename length, filename, hash
+

@@ -1,0 +1,9 @@
+OUmanifest extensions for Simon hash functions
+version 1
+
+function name for Simon: simon
+
+specification fields
+The "rounds" field specifies the number of rounds used to process the data.
+The "size" field specifies the number of bits in the hash output.
+
