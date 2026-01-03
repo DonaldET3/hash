@@ -1,0 +1,10 @@
+Ehrenfeucht-Mycielski sequence
+
+This is a sequence of "bits" (binary digits) that is defined by looking at the previous digits in the sequence and evading patterns in the sequence.
+
+The first three bits are "010". Each subsequent bit is found by looking for the longest series of preceeding bits that match the immediately preceeding bits and inverting the bit that comes after it.
+
+So for "010", the longest series of bits that can be matched to the immediately preceeding bits is the single 0 at the beginning of the series, which matches the 0 at the end of the series. Therefore, the next bit is the inversion of the 1 bit that is immediately after the first 0, so the sequence becomes "0100".
+
+This process is repeated for as long as necessary to produce the bits needed.
+
