@@ -1,0 +1,9 @@
+OUmanifest extensions for SimonBLAKE hash functions
+version 1
+
+function name for SimonBLAKE: simonblake
+
+specification fields
+The "size" field specifies the hash length in bits. The value must be a multiple of 8. The default value is 512; the value cannot be greater than 512.
+The "rounds" field specifies the number of rounds used to secure the function.
+

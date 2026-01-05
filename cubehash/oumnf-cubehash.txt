@@ -8,5 +8,5 @@ The "init" field specifies the number of rounds used to initialize the function.
 The "rounds" field specifies the number of rounds used to process the data.
 The "block" field specifies the number of bytes per data block (up to 128).
 The "final" field specifies the number of rounds used to finish the hash.
-The "size" field specifies the number of bits in the hash output. (a multiple of 8, at least 8, not more than 512)
+The "size" field specifies the number of bits in the hash output. (a multiple of 8, default: 512)
 
