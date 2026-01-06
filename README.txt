@@ -5,7 +5,6 @@ There are currently ten file hashing programs under development here each one im
 * BLAKE
 * CubeHash
 * Keccak
-* LAKE
 * MD6
 * Simon
 * SimonBLAKE

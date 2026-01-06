@@ -7,4 +7,5 @@ specification fields
 The "size" field specifies the hash length in bits. (multiple of 8, default: 512)
 The "rounds" field specifies the number of rounds used to compute the hash. (default: 16)
 The "wordsize" field specifies the number of bits in the integers used in the hash computation. (default: 64)
+The "wordrotation" field specifies the distance by which the word indicies are rotated every round. (value can be from 1 to 15, default: 1)
 
