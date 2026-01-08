@@ -4,6 +4,6 @@ version 1
 function name for Keccak: keccak
 
 specification fields
-The "size" field indicates the hash length in bits. (must be a multiple of 8, at least 8, not more than 792, default is 512)
+The "size" field specifies the hash length in bits. (must be a multiple of 8, default is 512)
 The "rounds" field specifies the number of rounds used to compute the hash.
-
+The "wordsize" field specifies the number of bits in the integers used in the hash computation. (default: 64)
