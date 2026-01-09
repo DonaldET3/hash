@@ -4,9 +4,10 @@ version 1
 function name for CubeHash: cubehash
 
 specification fields
-The "init" field specifies the number of rounds used to initialize the function.
-The "rounds" field specifies the number of rounds used to process the data.
-The "block" field specifies the number of bytes per data block (up to 128).
-The "final" field specifies the number of rounds used to finish the hash.
+The "init" field specifies the number of rounds used to initialize the function. (default: 16)
+The "rounds" field specifies the number of rounds used to process the data. (default: 16)
+The "block" field specifies the number of bytes per data block (up to 128). (default: 32)
+The "final" field specifies the number of rounds used to finish the hash. (default: 32)
 The "size" field specifies the number of bits in the hash output. (a multiple of 8, default: 512)
+The "wordsize" field specifies the number of bits in the integers used in the hash computation. (default: 32)
 

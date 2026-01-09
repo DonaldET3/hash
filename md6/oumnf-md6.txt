@@ -4,6 +4,7 @@ version 1
 function name for MD6: md6
 
 specification fields
-The "rounds" field specifies the number of rounds used to process the data.
-The "size" field specifies the number of bits in the hash output.
+The "rounds" field specifies the number of rounds used to process the data. (default: 168)
+The "size" field specifies the number of bits in the hash output. (default: 512)
+The "wordsize" field specifies the number of bits in the integers used in the hash computation. (default: 64)
 
