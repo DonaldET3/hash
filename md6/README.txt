@@ -32,6 +32,7 @@ c: check mode
 s: hash length in bits (multiple of 8, up to 512, default: 512)
 r: number of rounds (at least 40, default: 168)
 q: quiet
+t: threads (default: 2)
 
 md6-alg.txt describes the variation of the MD6 algorithm that is used in this
 program

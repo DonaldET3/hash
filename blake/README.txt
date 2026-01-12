@@ -30,10 +30,11 @@ l: list mode
 u: update mode
 c: check mode
 s: hash length in bits (multiple of 8, up to 512, default: 512)
-r: number of rounds (at least 8, default: 16)
+r: number of rounds (at least 8, default: 12)
 w: word size in bits (32 or 64, default: 64)
-p: word permutation (odd number 1 - 15, default: 1)
+p: word permutation (odd number 1 - 15, default: 5)
 q: quiet
+t: threads (default: 2)
 
 blake-alg.txt describes the variation of the BLAKE algorithm that is used in
 this program
