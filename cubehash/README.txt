@@ -29,7 +29,7 @@ h: print help and exit
 l: list mode
 u: update mode
 c: check mode
-s: hash length in bits (multiple of 8, default: 512)
+s: hash length in bits (multiple of 8, up to 512, default: 512)
 i: initialization rounds (at least 16, default: 16)
 r: rounds per block (at least 8, default: 16)
 b: block size in bytes (1 - 128, default: 32)

@@ -29,7 +29,7 @@ h: print help and exit
 l: list mode
 u: update mode
 c: check mode
-s: hash length in bits (multiple of 8, default: 512)
+s: hash length in bits (multiple of 8, up to 512, default: 512)
 r: number of rounds (at least 8, default: 16)
 w: word size in bits (32 or 64, default: 64)
 p: word permutation (odd number 1 - 15, default: 1)

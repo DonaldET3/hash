@@ -29,7 +29,7 @@ h: print help and exit
 l: list mode
 u: update mode
 c: check mode
-s: hash length in bits (multiple of 8, default: 512)
+s: hash length in bits (multiple of 8, up to 528, default: 512)
 r: number of rounds (at least 12, default: 24)
 q: quiet
 
