@@ -31,7 +31,7 @@ u: update mode
 c: check mode
 s: hash length in bits (multiple of 8, default: 512)
 r: number of rounds (8 - 16, default: 16)
-w: word size (32 or 64, default: 64)
+w: word size in bits (32 or 64, default: 64)
 p: word permutation (odd number 1 - 15, default: 1)
 q: quiet
 

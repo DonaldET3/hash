@@ -8,4 +8,5 @@ The "size" field specifies the hash length in bits. (multiple of 8, default: 512
 The "rounds" field specifies the number of rounds used to compute the hash. (default: 16)
 The "word-size" field specifies the number of bits in the integers used in the hash computation. (default: 64)
 The "word-perm" field specifies the distance by which the word indicies are rotated every round. (value can be any odd value from 1 to 15, default: 1)
+The "endian" field specifies whether the bytes are loaded into words in "big" order (most significant byte first), or "little" order (least significant byte first). (default: little)
 

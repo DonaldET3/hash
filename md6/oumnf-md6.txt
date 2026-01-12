@@ -7,4 +7,5 @@ specification fields
 The "rounds" field specifies the number of rounds used to process the data. (default: 168)
 The "size" field specifies the number of bits in the hash output. (default: 512)
 The "wordsize" field specifies the number of bits in the integers used in the hash computation. (default: 64)
+The "endian" field specifies whether the bytes are loaded into words in "big" order (most significant byte first), or "little" order (least significant byte first). (default: little)
 

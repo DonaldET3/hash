@@ -7,3 +7,5 @@ specification fields
 The "size" field specifies the hash length in bits. (must be a multiple of 8, default is 512)
 The "rounds" field specifies the number of rounds used to compute the hash.
 The "wordsize" field specifies the number of bits in the integers used in the hash computation. (default: 64)
+The "endian" field specifies whether the bytes are loaded into words in "big" order (most significant byte first), or "little" order (least significant byte first). (default: little)
+
