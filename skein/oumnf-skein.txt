@@ -8,4 +8,6 @@ The "rounds" field specifies the number of rounds used to process the data. (def
 The "size" field specifies the number of bits in the hash output. (default: 512)
 The "wordcount" field specifies the number of words used in the hash state. (power of 2, at least 4, default: 8)
 The "endian" field specifies whether the bytes are loaded into words in "big" order (most significant byte first), or "little" order (least significant byte first). (default: little)
+The "leaf" field specifies the power of 2 number of blocks in each leaf. (default: 3)
+The "fanout" field specifies the power of 2 number of nodes under each node (default: 3)
 

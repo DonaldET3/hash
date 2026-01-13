@@ -9,5 +9,5 @@ The "rounds" field specifies the number of rounds used to compute the hash. (def
 The "word-size" field specifies the number of bits in the integers used in the hash computation. (default: 64)
 The "word-perm" field specifies the distance by which the word indicies are rotated every round. (value can be any odd value from 1 to 15, default: 5)
 The "endian" field specifies whether the bytes are loaded into words in "big" order (most significant byte first), or "little" order (least significant byte first). (default: little)
-The "leaf" field specifies the number of bytes in each leaf node. (default: 4096)
+The "leaf" field specifies the number of 16 word blocks in each leaf node. (default: 16)
 
