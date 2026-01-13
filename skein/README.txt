@@ -33,6 +33,7 @@ s: hash length in bits (multiple of 8, up to 1024, default: 512)
 r: number of rounds (at least 72, default: 72)
 w: word count (4, 8, or 16, default: 8)
 q: quiet
+t: threads (default: 2)
 
 skein-alg.txt describes the variation of the Skein algorithm that is used in
 this program
