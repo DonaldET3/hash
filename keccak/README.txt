@@ -29,9 +29,13 @@ h: print help and exit
 l: list mode
 u: update mode
 c: check mode
-s: hash length in bits (multiple of 8, up to 528, default: 512)
+s: hash length in bits (multiple of 8, up to 800, default: 512)
 r: number of rounds (at least 12, default: 24)
+w: word size in bits (64 or 128, default: 128)
 q: quiet
+
+future options
+t: threads (default: 2)
 
 keccak-alg.txt describes the variation of the Keccak algorithm that is used in
 this program

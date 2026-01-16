@@ -24,17 +24,22 @@ and the hash does not match.
 
 The quiet option inhibits reports of OK files.
 
-options_
+options
 h: print help and exit
 l: list mode
 u: update mode
 c: check mode
 s: hash length in bits (multiple of 8, up to 512, default: 512)
-i: initialization rounds (at least 16, default: 16)
-r: rounds per block (at least 8, default: 16)
-b: block size in bytes (1 - 128, default: 32)
-f: finalization rounds (at least 32, default: 32)
+i: initialization rounds (at least 16, default: 24)
+r: rounds per block (at least 8, default: 24)
+b: block size in bytes (default: 64)
+f: finalization rounds (at least 32, default: 48)
+n: node size in bytes (at least 4 times hash length, default: 4096)
+w: word size in bits (32 or 64, default: 64)
 q: quiet
+
+future options
+t: threads (default: 2)
 
 cubehash-alg.txt describes the variation of the CubeHash algorithm that is used
 in this program
