@@ -1,3 +1,0 @@
-Opal BLAKE
-algorithm
-
