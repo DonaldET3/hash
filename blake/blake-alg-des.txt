@@ -5,6 +5,7 @@ This version of the BLAKE algorithm takes inspiration from BLAKE2, BLAKE3, and i
 
 BLAKE is a cryptographic hash function that mixes message blocks into a hash. The process of mixing each block into the hash is called "compression". The BLAKE compression function uses a state block and a message block to produce either a chain value that is used in the next state block to be combined with another message block or to produce the final hash.
 
-The state block and the data block are each 16 words. The first 8 words of the state block (words 0 through 7) are the chain value. The next 4 words (words 8 through 11) are initialized from constant values. Words 12 and 13 are used for a counter. Word 14 is the number of message bits in the message block. Word 15 contains bit flags.
+The state block and the message block are each 16 words. The first 8 words of the state block (words 0 through 7) are the chain value. The next 4 words (words 8 through 11) are initialized from constant values. Words 12 and 13 are used for a counter. Word 14 is the number of message bits in the message block. Word 15 contains bit flags.
 
 The 4 constant values are the result of setting all words to 0, but setting the first word of the state block to 1, then running the compression function. The first 4 words of the result are the initialization constants.
+
