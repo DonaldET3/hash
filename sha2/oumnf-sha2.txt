@@ -1,0 +1,11 @@
+OUmanifest extensions for SHA-2 hash functions
+version 1
+
+function name for SHA-2: sha2
+
+specification fields
+The "size" field specifies the hash length in bits. (must be a multiple of 8, default is 512)
+The "rounds" field specifies the number of rounds used to compute the hash. (default: 96)
+The "wordsize" field specifies the number of bits in the integers used in the hash computation. (default: 128)
+The "endian" field specifies whether the bytes are loaded into words in "big" order (most significant byte first), or "little" order (least significant byte first). (default: little)
+
